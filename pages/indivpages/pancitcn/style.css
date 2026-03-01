@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #FBF7F4;
+    color: #6B5B4A;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #E8DDD0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.logo-icon {
+    color: #8B6F47;
+    transition: color 0.3s;
+}
+
+.logo:hover .logo-icon {
+    color: #C17C74;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6B5B4A;
+}
+
+.logo-text:hover {
+    transform: scale(1.13);
+    opacity: 0.9;
+    color: #C17C74;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #6B5B4A;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s, opacity 0.2s;
+}
+
+.nav-links a:hover {
+    transform: scale(1.13);
+    opacity: 0.9;
+    color: #C17C74;
+}
+
+.main-content {
+    padding: 48px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #8B6F47;
+    text-decoration: none;
+    margin-bottom: 32px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #C17C74;
+}
+
+
+.hero-image {
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.recipe-header {
+    margin-bottom: 48px;
+}
+
+.recipe-header h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #6B5B4A;
+    margin-bottom: 16px;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    font-size: 20px;
+    color: #E8DDD0;
+}
+
+.star.filled {
+    color: #C17C74;
+}
+
+.star.half {
+    background: linear-gradient(90deg, #C17C74 50%, #E8DDD0 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.rating-text {
+    font-size: 18px;
+    color: #8B6F47;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #6B5B4A;
+}
+
+
+.meta-info {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.meta-label {
+    font-size: 14px;
+    color: #8B6F47;
+}
+
+.meta-value {
+    font-weight: 500;
+    color: #6B5B4A;
+}
+
+
+section {
+    margin-bottom: 48px;
+}
+
+section h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #6B5B4A;
+    margin-bottom: 24px;
+}
+
+
+.history-section {
+    background: #F5EBE0;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.history-section p {
+    color: #6B5B4A;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+.ingredients-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    color: #6B5B4A;
+}
+
+.ingredients-list li:before {
+    content: "•";
+    color: #C17C74;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: -2px;
+}
+
+
+.instructions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.instruction-step {
+    display: flex;
+    gap: 24px;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #C17C74;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.instruction-step p {
+    padding-top: 8px;
+    color: #6B5B4A;
+    line-height: 1.7;
+}
+
+
+.tips-section {
+    background: #F5EBE0;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.tips-list {
+    list-style: none;
+}
+
+.tips-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    color: #6B5B4A;
+    line-height: 1.7;
+}
+
+.tip-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.cultural-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #C17C74;
+}
+
+.cultural-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6B5B4A;
+}
+
+
+.comments-section h2 {
+    margin-bottom: 24px;
+}
+
+.comment {
+    display: flex;
+    gap: 16px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comment-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-header h4 {
+    font-weight: 500;
+    color: #6B5B4A;
+}
+
+.comment-date {
+    font-size: 14px;
+    color: #8B6F47;
+}
+
+.comment-rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 12px;
+}
+
+.comment-rating .star {
+    font-size: 16px;
+}
+
+.comment-content p {
+    color: #6B5B4A;
+    line-height: 1.7;
+}
+
+
+.review-form-section {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.review-form {
+    margin-top: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #6B5B4A;
+    font-weight: 500;
+}
+
+.rating-input {
+    display: flex;
+    gap: 8px;
+}
+
+.star-input {
+    font-size: 32px;
+    color: #E8DDD0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-input:hover,
+.star-input.active {
+    color: #C17C74;
+}
+
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #E8DDD0;
+    border-radius: 12px;
+    background: #FBF7F4;
+    color: #6B5B4A;
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #C17C74;
+}
+
+.submit-btn {
+    background: #C17C74;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #A66B64;
+}
+
+
+.footer {
+    background: #F5EBE0;
+    border-top: 1px solid #E8DDD0;
+    margin-top: 96px;
+    padding: 48px 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-text {
+    color: #6B5B4A;
+    text-align: center;
+    max-width: 600px;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+.social-icon {
+    width: 40px;
+    height: 22px;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: #C17C74;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #8B6F47;
+}
+
+
+@media (max-width: 768px) {
+    .recipe-header h1 {
+        font-size: 36px;
+    }
+    
+    .hero-image img {
+        height: 300px;
+    }
+    
+    section h2 {
+        font-size: 28px;
+    }
+    
+    .meta-info {
+        gap: 24px;
+    }
+    
+    .nav-links {
+        gap: 16px;
+        font-size: 14px;
+    }
+    
+    .instruction-step {
+        gap: 16px;
+    }
+    
+    .comment {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-header h1 {
+        font-size: 28px;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .meta-info {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

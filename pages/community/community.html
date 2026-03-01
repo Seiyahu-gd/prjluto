@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Community – Luto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="comstyle.css" />
+  <link rel="icon" type="image/png" href="../../images/Logo.icon.png" />
+</head>
+<body>
+
+  <nav class="fade-in d0">
+    <a href="../../index.html" class="nav-logo">
+      <img src="../../images/Logo.icon.png" alt="Luto logo" class="nav-logo-icon" />
+      Luto
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../recipes/recipes.html">Recipes</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../community/community.html" class="active">Community</a></li>
+    </ul>
+  </nav>
+
+  <div class="coming-soon">
+      <img src="../../images/angry-typing-kitty.gif" alt="Coming soon" class="gif" />
+
+    <span class="coming-badge fade-in d200">Coming Soon</span>
+
+    <h1 class="fade-in d400">We're Working On It.</h1>
+
+    <div class="divider fade-in d400"></div>
+
+    <p class="fade-in d600">
+      The Luto community is being built with love. Soon you'll be able to share
+      your cooking, connect with fellow Filipino food lovers, and keep our
+      culinary heritage alive together.
+    </p> <!-- Edit message text -->
+
+  </div>
+
+  <footer class="fade-in d0">
+    <p class="footer-tagline">Preserving Filipino culinary heritage, one recipe at a time.</p>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="#" title="Facebook"><img src="../../images/fb.png" alt="Facebook" class="footer-icon" /></a>      
+      <a href="#" title="Instagram"><img src="../../images/insta.png" alt="Instagram" class="footer-icon" /></a>
+      <a href="#" title="Youtube"><img src="../../images/yt.png" alt="Youtube" class="footer-icon" /></a>    
+    </div>
+    <p class="footer-copy">© 2026 Luto. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

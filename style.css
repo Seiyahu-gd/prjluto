@@ -81,14 +81,19 @@ nav {
   text-decoration: none;
   font-size: 15px;
   color: var(--brown-dark);
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s, opacity 0.2s;;
   cursor: pointer;
   user-select: auto;
+  display: inline-block; 
 }
-.nav-links a.active,
-.nav-links a:hover {
-  color: var(--brown-light);
+.nav-links a.active {
+  color: #C17C74;
   font-weight: 500;
+}
+.nav-links a:hover {
+  transform: scale(1.13);
+  opacity: 0.9;
+  color: #C17C74;
 }
 
 
@@ -385,9 +390,10 @@ footer {
 .footer-copy    { font-size: 12.8px; color: var(--brown-mid); }
 
 .footer-icon {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 22px;
   object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 

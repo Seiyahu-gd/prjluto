@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumpia Shanghai - Cooking Intro</title>
+    <style>
+        /* CSS STYLING */
+        body {
+            background-color: #f5f1ea;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .recipe-container {
+            width: 100%;
+            max-width: 850px;
+            background-color: #fdfaf5;
+            padding: 40px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 { color: #8d3e2f; font-size: 2.5rem; margin: 0; }
+        
+        .rating-row { display: flex; align-items: center; gap: 10px; margin: 10px 0; }
+        .stars { color: #e67e22; font-size: 1.2rem; }
+        .review-link { color: #888; font-size: 0.9rem; text-decoration: underline; }
+
+        .meta-grid {
+            display: flex;
+            gap: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0dacc;
+            margin-bottom: 30px;
+        }
+
+        .meta-item b { display: block; color: #333; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: #f2e8d5;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; color: #8d3e2f; }
+
+        .white-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .prep-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* Numbered Instructions */
+        .instruction-list { padding: 0; list-style: none; }
+        .instruction-step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: #8d3e2f;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.8rem;
+        }
+
+        /* Review Section */
+        .review-card {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .review-header { display: flex; justify-content: space-between; font-size: 0.8rem; color: #888; }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #a0522d;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="recipe-container">
+        <header>
+            <img src="Shanghai.jpg" alt="Lumpia" class="hero-image">
+            <h1>Lumpia Shanghai</h1>
+            <div class="rating-row">
+                <span class="stars">★★★★☆</span>
+                <span class="review-link">4.8 (1,050 reviews)</span>
+            </div>
+            <p>Pork Lumpia Shanghai is a classic Filipino dish featuring a savory mixture of ground meat and vegetables wrapped in a thin pastry.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item"><b>Prep Time</b> 45 Mins</div>
+                <div class="meta-item"><b>Cook Time</b> 15 Mins</div>
+                <div class="meta-item"><b>Servings</b> 4</div>
+            </div>
+        </header>
+
+        <div class="highlight-box">
+            <h3>About This Dish</h3>
+            <p>Lumpia stems from Chinese influences, but Filipinos have made it their own. It is traditionally served with sweet and sour sauce or banana ketchup.</p>
+        </div>
+
+        <section>
+            <h2>Ingredients</h2>
+            <div class="white-card">
+                <h3>Main Ingredients</h3>
+                <ul>
+                    <li>2 lb ground pork</li>
+                    <li>1/2 cup minced carrots</li>
+                    <li>1/2 cup minced onions</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1 egg, lightly beaten</li>
+                    <li>1 tsp salt & pepper</li>
+                    <li>Spring roll wrappers</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ingredient Preparation</h2>
+            <img src="Lumpia.jpg" class="prep-image" alt="Preparation">
+            
+            <h2>Instructions</h2>
+            <div class="instruction-list">
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <div>In a large bowl, combine ground pork, carrots, onions, garlic, and egg. Mix until well combined.</div>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <div>Place 1 tablespoon of filling on a wrapper. Roll tightly and seal with water.</div>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">3</div>
+                    <div>Heat oil in a pan and fry until golden brown (about 3-5 minutes).</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="highlight-box">
+            <h3>Pro Tips</h3>
+            <p>Don't overfill the wrappers, or they might burst during frying. Chilling the meat for 30 minutes before wrapping makes it easier to handle.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Cultural Significance</h3>
+            <p>In Filipino culture, Lumpia is more than just food—it's a connection to family. It represents adaptability and is a staple at every fiesta.</p>
+        </div>
+
+        <section>
+            <h2>Community Reviews (2)</h2>
+            <div class="white-card">
+                <div class="review-card">
+                    <div class="review-header"><b>Maria Santos</b> <span>February 10, 2026</span></div>
+                    <div class="stars">★★★★★</div>
+                    <p>This recipe brought back so many childhood memories!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header"><b>Joshua Ryevan</b> <span>February 8, 2026</span></div>
+                    <div class="stars">★★★★☆</div>
+                    <p>This food represents the filipino pride, it's iconic and beloved by many.</p>
+                </div>
+            </div>
+
+            <div class="review-input-area">
+                <h3>Leave a Review</h3>
+                <p>Your Rating</p>
+                <div class="stars">☆☆☆☆☆</div>
+                <p>Your Review</p>
+                <textarea placeholder="Share your experience making this dish..."></textarea>
+                <button class="btn">Post Review</button>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
